@@ -31,7 +31,7 @@ matrix:
     - jdk: openjdk8
       env:
         - DESC="tests and deploy"
-        - CMD="mvn -e clean integration-test failsafe:verify -DargLine='-Xms1024m -Xmx2048m'"
+        - CMD="mvn -e clean integration-test failsafe:verify -DargLine='-Xms1024m -Xmx2048m' && mvn clean package && mvn clean package && mvn clean package"
         - DEPLOY="true"
         - USE_MAVEN_REPO="true"
 
